@@ -1,0 +1,88 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("URLMONGODB")
+}
+
+model EspaceVert {
+  id                 String   @id @map("_id") @db.ObjectId
+  nsqEspaceVert      Int?     @map("nsq_espace_vert")
+  nom                String?
+  type               String?
+  adresse            String?
+  arrondissement     String?
+  statutOuverture    String?  @map("statut_ouverture")
+  ouvert24h          String?  @map("ouvert_24h")
+  caniculeOuverture  String?  @map("canicule_ouverture")
+  ouvertureNocturne  String?  @map("ouverture_estivale_nocturne")
+  horairesPeriode    String?  @map("horaires_periode")
+  horairesLundi      String?  @map("horaires_lundi")
+  horairesMardi      String?  @map("horaires_mardi")
+  horairesMercredi   String?  @map("horaires_mercredi")
+  horairesJeudi      String?  @map("horaires_jeudi")
+  horairesVendredi   String?  @map("horaires_vendredi")
+  horairesSamedi     String?  @map("horaires_samedi")
+  horairesDimanche   String?  @map("horaires_dimanche")
+  categorie          String?
+  propositionUsager  String?  @map("proposition_usager")
+  idDicom            String?  @map("id_dicom")
+  latitude           Float?   @map("geo_point_2d_lat")
+  longitude          Float?   @map("geo_point_2d_lon")
+  surfaceVegetation  Float?   @map("surf_veget_sup8m_2024")
+  indiceVegetation   Float?   @map("indice_veget_sup8m_2024")
+
+  @@map("espaces_verts")
+}
+
+model EquipementActivite {
+  id                String   @id @map("_id") @db.ObjectId
+  idDicom           String?  @map("id_dicom")
+  nom               String?
+  type              String?
+  payant            String?
+  adresse           String?
+  arrondissement    String?
+  statutOuverture   String?  @map("statut_ouverture")
+  horairesPeriode   String?  @map("horaires_periode")
+  horairesLundi     String?  @map("horaires_lundi")
+  horairesMardi     String?  @map("horaires_mardi")
+  horairesMercredi  String?  @map("horaires_mercredi")
+  horairesJeudi     String?  @map("horaires_jeudi")
+  horairesVendredi  String?  @map("horaires_vendredi")
+  horairesSamedi    String?  @map("horaires_samedi")
+  horairesDimanche  String?  @map("horaires_dimanche")
+  latitude          Float?   @map("geo_point_2d_lat")
+  longitude         Float?   @map("geo_point_2d_lon")
+  propositionUsager String?  @map("proposition_usager")
+
+  @@map("equipements_activites_fraicheurs")
+}
+
+model Fontaine {
+  id              String   @id @map("_id") @db.ObjectId
+  gid             String
+  type_objet      String?
+  modele          String?
+  no_voirie_pair  String?
+  no_voirie_impair String?
+  voie            String?
+  commune         String?
+  dispo           String?
+  debut_ind       String?
+  fin_ind         String?
+  motif_ind       String?
+  geo_shape       Json?
+  geo_point_2d    Json?
+
+  @@map("fontaines")
+}
