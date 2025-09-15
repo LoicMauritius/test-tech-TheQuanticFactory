@@ -1,0 +1,13 @@
+/* FilterGroup molecule styles */
+.filterGroup {
+    margin-bottom: 24px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--foreground);
+    font-size: 14px;
+    font-family: var(--nexa-heavy);
+}

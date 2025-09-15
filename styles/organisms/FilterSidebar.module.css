@@ -1,0 +1,50 @@
+/* FilterSidebar organism styles */
+.sidebar {
+    background-color: var(--card-background);
+    border-radius: 16px;
+    padding: 24px;
+    height: fit-content;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    gap: 1dvh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 15dvh; 
+    left: 5dvw;
+    width: 300px;
+}
+
+/* --------------------------------------------------------- Sidebar Header --------------------------------------------------------- */
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  gap: 1dvw;
+  margin-bottom: 1dvh;
+  padding-bottom: 2dvh;
+  border-bottom: 1px solid var(--gray-medium);
+}
+
+.filterIcon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-important);
+}
+
+.sidebarTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-family: var(--nexa-heavy);
+}
+
+/* --------------------------------------------------------- Sidebar Container --------------------------------------------------------- */
+
+.filtersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1dvh;
+}
