@@ -1,0 +1,22 @@
+/* Input atom styles */
+.input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--background);
+    border-radius: 6px;
+    font-size: 14px;
+    /* Using CSS variables for card background */
+    background-color: var(--card);
+    color: var(--foreground);
+    font-family: var(--nexa-extralight);
+}
+
+.input:focus {
+    /* Using direct color value for consistency */
+    border-color: #5f259f;
+    box-shadow: 0 0 0 2px rgba(95, 37, 159, 0.1);
+}
+
+.input::placeholder {
+    color: var(--gray-dark);
+}

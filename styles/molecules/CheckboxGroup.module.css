@@ -1,0 +1,41 @@
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-important);
+}
+
+.checkboxLabel {
+  font-size: 14px;
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+/* === Bouton Voir plus / Voir moins === */
+.toggleButton {
+  margin-top: 0.5rem;
+  background-color: transparent;
+  border: none;
+  color: #0070f3;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.25rem 0;
+  transition: color 0.2s;
+}
+
+.toggleButton:hover {
+  color: #0051a3;
+  text-decoration: underline;
+}
