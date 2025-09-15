@@ -1,0 +1,24 @@
+/* MainPageTemplate styles */
+.pageContainer {
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+.mainContent {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 5dvh 2dvw;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+    align-items: start;
+    height: 100%;
+    margin-top: 10dvh;
+}
+
+@media (max-width: 768px) {
+    .mainContent {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
