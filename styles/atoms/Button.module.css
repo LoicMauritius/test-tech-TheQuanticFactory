@@ -1,0 +1,62 @@
+/* Button atom styles */
+.button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.primary {
+    /* Using direct color value for consistency */
+    background-color: #5f259f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: .9rem;
+    transition: background-color .2s;
+    cursor: pointer;
+}
+
+.primary:hover {
+  background-color: #4a1d7a;
+}
+
+.secondary {
+  /* Using CSS variables for card background */
+  background-color: var(--card);
+  color: var(--foreground);
+  border: 1px solid var(--gray-medium);
+}
+
+.secondary:hover {
+  background-color: var(--gray-light);
+}
+
+.tab {
+    background-color: transparent;
+    color: var(--gray-dark);
+    padding: 0.5dvh 1.5dvw;
+    text-align: center;
+    font-family: var(--nexa-heavy);
+    font-size: 1rem;
+    border-radius: 0px;
+    border: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.tab:hover {
+    background-color: #ffffff75;
+    backdrop-filter: blur(6px);
+}
+
+.tabActive {
+    /* Using CSS variables for card background */
+    background-color: var(--card-background);
+}

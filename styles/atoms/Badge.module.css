@@ -1,0 +1,30 @@
+/* Badge atom styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Fixed contrast issues by using darker text colors on light backgrounds */
+.success {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #166534;
+}
+
+.error {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #991b1b;
+}
+
+.warning {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #92400e;
+}
+
+.neutral {
+  background-color: var(--gray-light);
+  color: var(--foreground);
+}

@@ -1,0 +1,13 @@
+/* TabNavigation molecule styles */
+.tabNavigation {
+    display: flex;
+    background-color: var(--tab-background);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 2dvh;
+    flex-direction: row;
+}
+
+.tabButton {
+    font-family: var(--nexa-heavy);
+}
