@@ -1,0 +1,61 @@
+/* ContentArea organism styles */
+.contentArea {
+    background-color: var(--card-background);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mapArea {
+    display: flex;
+    flex-direction: column;
+    padding: 2dvh 1dvw;
+}
+
+.tableArea{
+    padding: 5dvh 2dvw;
+    display: flex;
+    flex-direction: column;
+    gap: 1dvh;
+}
+
+.tableArea canvas{
+    margin-top: 5dvh;
+}
+
+.dataTable {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 8px;       
+    margin-top: 1dvh;
+    table-layout: fixed;       
+}
+
+.dataTable th,
+.dataTable td {
+    padding: 12px;
+    text-align: center;
+    border-radius: 16px;
+    width: 1%;             
+    white-space: nowrap;    
+    overflow: hidden;      
+    text-overflow: ellipsis; 
+    background-color: var(--card); 
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.dataTable th {
+    background-color: #bbbbbb;
+    font-family: var(--nexa-heavy);
+    color: var(--foreground);
+    font-size: 1rem;
+    border: 1px solid #000;
+}
+
+.dataTable td {
+    font-size: 0.9rem;
+    border-right: 1px solid var(--background);
+}
+
+.dataTable tr:hover td {
+    background-color: var(--gray-light);
+}
