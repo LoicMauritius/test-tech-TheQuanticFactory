@@ -2,13 +2,13 @@
 
 ## 1. Description du projet
 
-**Urban Fresh Next** est une application web développée avec Next.js qui permet de visualiser les données urbaines de la ville de Paris, en se concentrant sur les **îlots de fraîcheur** et les **points d'eau**. L'objectif est d'offrir aux utilisateurs un moyen simple et rapide de trouver des espaces verts, des équipements sportifs ou des fontaines à boire, particulièrement utile lors des journées chaudes.
+**Urban Fresh Next** est une application web développée avec Next.js qui permet de visualiser les données urbaines de la ville de Paris, en se concentrant sur les **îlots de fraîcheur** et les **points d'eau**. L'objectif est d'offrir aux utilisateurs un moyen simple, rapide et particulièrement utile lors des journées chaudes afin de trouver des espaces verts, des équipements sportifs ou des fontaines pour se désaltérer.
 
 ### Fonctionnalités principales
 
--   **Visualisation de données multiples** : Affiche les espaces verts, les équipements/activités, et les fontaines à boire.
+-   **Visualisation de données multiples** : Affiche les espaces verts, les équipements, infrastructures et les fontaines à boire.
 -   **Filtrage avancé** : Permet de filtrer les données par arrondissement, par mot-clé (nom, type, adresse), par disponibilité (ouvert/fermé) ou par tarification (payant/gratuit).
--   **Vues multiples** : Les données peuvent être consultées sous forme de **tableau paginé**, sur une **carte interactive** (pour les fontaines), ou via un **graphique** synthétisant la répartition des îlots de fraîcheur par arrondissement.
+-   **Vues multiples** : Les données peuvent être consultées sous forme de **tableau paginé**, sur une **carte interactive** (pour les fontaines) ou via un **graphique** synthétisant la répartition des îlots de fraîcheur par arrondissement.
 -   **Interface réactive** : L'application est conçue pour être fluide et utilisable sur différentes tailles d'écran.
 -   **Données centralisées** : L'application utilise une base de données MongoDB, interrogée via l'ORM Prisma, pour garantir la performance et la cohérence des données.
 
@@ -39,8 +39,8 @@ Pour lancer le projet en local, suivez ces étapes :
         npx prisma db push
         ```
 
-    *Important !!!*: Vous pouvez charger les données depuis l'API publique opendata.paris.fr en allant dans le layout à la ligne 42-43
-    -   ligne 42: const data = await getAPIData()                //Appel de l'API pour récupérer les données
+    *⚠️ Important*: Vous pouvez charger les données depuis l'API publique opendata.paris.fr en allant dans le layout à la ligne 42-43
+    -   ligne 42: const data = await getAPIData()                   //Appel de l'API pour récupérer les données
     -   ligne 43: const data = await getPrismaData()                //Appel de la base de données pour récupérer les données
   
     Mettez l'un ou l'autre en commentaire en fonction de vos moyens et de vos besoins.
@@ -101,7 +101,6 @@ La zone de contenu est organisée en onglets :
 
 ## 5. Images démo
 
-<img width="1915" height="892" alt="2" src="https://github.com/user-attachments/assets/be0e64f9-157f-4f4c-8ff4-0f6d3359a0cd" />
 <img width="1898" height="898" alt="1" src="https://github.com/user-attachments/assets/62a9c737-a61d-4742-82fd-1eb37fd22ae5" />
-
+<img width="1915" height="892" alt="2" src="https://github.com/user-attachments/assets/be0e64f9-157f-4f4c-8ff4-0f6d3359a0cd" />
 
